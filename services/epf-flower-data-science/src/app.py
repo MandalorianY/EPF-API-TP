@@ -5,6 +5,7 @@ from src.api.router import router
 
 
 def get_application() -> FastAPI:
+    """Create a FastAPI application."""
     application = FastAPI(
         title="epf-flower-data-science",
         description="""Fast API""",

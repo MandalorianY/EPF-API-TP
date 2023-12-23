@@ -3,3 +3,4 @@ services/epf-flower-data-science/src/schemas/__pycache__/*
 services/epf-flower-data-science/src/services/__pycache__/*
 services/epf-flower-data-science/src/services/api/__pycache__/*
 *.pyc
+services/epf-flower-data-science/src/auth/*
