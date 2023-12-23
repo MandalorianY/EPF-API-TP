@@ -4,6 +4,14 @@ from pydantic.generics import GenericModel
 
 
 def snake_2_camel(m: str) -> str:
+    """Convert snake_case to camelCase for Pydantic models
+
+    Args:
+        m (str): The string to convert.
+
+    Returns:
+        str: The converted string.
+    """
     return snake2camel(m, True)
 
 
