@@ -47,7 +47,7 @@ def predictions_classification_moodel(file_path: str) -> str:
         if not os.path.exists('src/models/knn.joblib'):
             training_classification_model(file_path)
         _, test = split_dataset(file_path)
-        knn = joblib.load('src/data/models/knn.joblib')
+        knn = joblib.load('src/models/knn.joblib')
         test = pd.DataFrame(json.loads(test))
         X_test = test.drop('Species', axis=1)
         predictions = knn.predict(X_test)
