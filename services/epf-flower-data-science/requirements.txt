@@ -9,4 +9,4 @@ pandas
 scikit-learn
 google-auth
 google-cloud-firestore
-pyrate_limiter
+httpx
