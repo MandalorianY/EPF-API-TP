@@ -1,6 +1,6 @@
 from sklearn.neighbors import KNeighborsClassifier
 from src.services.utils import split_dataset
-from src.services.parameters import get_parameters
+from src.services.parameters import get_parameters_from_firebase
 import pandas as pd
 import joblib
 import json
@@ -16,8 +16,8 @@ def training_classification_model(file_path: str) -> str:
         str: Message with the result of the training or an error message.
     """
     try:
-        parameters = json.loads(get_parameters(
-            'src/config/model_parameters.json'))
+        parameters = json.loads(get_parameters_from_firebase(
+            'parameters', 'model_parameters'))
         train, _ = split_dataset(file_path)
         train = pd.DataFrame(json.loads(train))
         X_train = train.drop('Species', axis=1)
